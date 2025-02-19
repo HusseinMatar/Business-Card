@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>BusinessCard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      const text = `A FrontEnd Developer Turning concepts into pixel-perfect interfaces.
+    	•	“Got an idea? Let’s bring it to life!”`;
+
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          let char = text.charAt(i);
+          if (char === "\n") {
+            document.querySelector(".quote").innerHTML += "<br>";
+          } else {
+            document.querySelector(".quote").innerHTML += char;
+          }
+          i++;
+          setTimeout(typeWriter, 50);
+        }
+      }
+
+      window.onload = typeWriter;
+    </script>
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-content">
+        <p class="quote"></p>
+      </div>
+      <div class="card-footer">
+        <div class="footer-content">
+          <img src="MyPhoto.JPG" alt="Profile Picture">         
+          <div class="contact-info">
+            <p>
+              <i class="fa-solid fa-user"></i>
+              <a
+                href="https://www.linkedin.com/in/hussein-matar-533ba918b"
+                target="_blank"
+                >Hussein Matar</a
+              >
+            </p>
+            <p>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:hussein_matar_1998@programmer.net"> hussein_matar_1998@programmer.net</a>
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+39-329-3511460">+39 329 3511460</a> 
+            </p>
+            <p>
+              <i class="fa-brands fa-github"></i>
+              <a href="https://github.com/HusseinMatar" target="_blank">
+                GitHub Profile</a
+              >
+            </p>
+            <p>
+              <i class="fa-brands fa-telegram"></i>
+              <a href="https://t.me/Hussein_Matar98" target="_blank"
+                >Telegram</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
