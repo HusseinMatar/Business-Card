@@ -1,16 +1,19 @@
 html, body {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
+    height: 100dvh; /* Fix for iPhone 14 Pro & newer */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("https://husseinmatar.github.io/Business-Card/images/space.JPG");
+    background-image: url("https://husseinmatar.github.io/Business-Card/images/space.JPG"); 
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Fix for iOS */
 }
+
 
 body {
     display: flex;
@@ -140,11 +143,12 @@ body {
 
 @media (max-width: 768px) {
     body {
+        background-image: url("https://husseinmatar.github.io/Business-Card/images/space.JPG"); 
         background-size: cover;
-        justify-content: center;
-        align-items: center;
         background-position: center;
-    
+        background-repeat: no-repeat;
+        background-attachment: scroll; /* Fix for Safari */
+        min-height: 100dvh; /* Ensure full screen coverage */
     }
     .card {
         max-width: 90%;
@@ -161,6 +165,13 @@ body {
     .profile-img {
         width: 80px;
         height: 80px;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        min-height: 100dvh; /* Ensures background is visible on Safari */
+        background-attachment: scroll; /* Prevents disappearing */
     }
 }
 
