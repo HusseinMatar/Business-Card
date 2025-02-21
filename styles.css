@@ -7,7 +7,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("space.JPG");
+    background-image: url("https://husseinmatar.github.io/Business-Card/images/space.JPG");
     background-size: cover;
     background-position: center;
 }
