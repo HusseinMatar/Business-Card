@@ -171,7 +171,7 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background-image: url("images/space.JPG");
+        background-image: url("https://husseinmatar.github.io/Business-Card/images/space.JPG");
         background-position: center;
         background-size: cover;
         overflow: hidden; /* Prevents scrolling */
